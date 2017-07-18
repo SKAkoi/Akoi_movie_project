@@ -7,8 +7,18 @@ def grabmovies(filename):
     movies = []
     with open(filename, 'rb') as csvfile:
         reader = csv.DictReader(csvfile)
+        '''
+        loop to create instances of the Method class by assigning data
+        read from the csv file to the class variables
+        '''
         for movie in reader:
-            movies.append(Movie(title=movie['Name'], trailer_youtube_url=movie['trailer_youtube_url'], cover_art_url=movie['cover_art_url'], year_released=movie['year_released'], synopsis=movie['synopsis'], genre=movie['genre'], rating=movie['rating']))
+            movies.append(Movie(title=movie['Name'],
+                                trailer_youtube_url=movie['trailer_youtube_url'],
+                                cover_art_url=movie['cover_art_url'],
+                                year_released=movie['year_released'],
+                                synopsis=movie['synopsis'],
+                                genre=movie['genre'], rating=movie['rating']))
+
     return movies
 
 #gather up the list of movies into a list

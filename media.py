@@ -2,7 +2,9 @@
 class Movie():
         #available ratings and genres for the movies
         RATINGS = ["G", "PG", "PG-13", "R"]
-        GENRE = ["Action", "Adventure", "Comedy", "Documentary", "Drama", "Horror", "Romance", "Science Fiction", "Thriller"]
+        GENRE = ["Action", "Adventure", "Comedy",
+                 "Documentary", "Drama", "Horror",
+                 "Romance", "Science Fiction", "Thriller"]
 
         #initialise the class variables
         def __init__(self, title, trailer_youtube_url, cover_art_url, year_released, synopsis, genre, rating):
